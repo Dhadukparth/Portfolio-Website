@@ -1,0 +1,238 @@
+.contact-area.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: var(--black);
+    z-index: var(--z-md);
+}
+
+.contact-area.active .main-section {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.contact-area.active .main-section .lightbox-close {
+    position: relative;
+}
+
+.contact-area.active .main-section .lightbox-close .close-btn {
+    position: fixed;
+    right: 4rem;
+    top: 2rem;
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.contact-area.active .main-section .contact-content {
+    margin-top: 5rem;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .page-heading {
+    position: relative;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .page-heading .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .page-heading .section-title span {
+    color: var(--active-color);
+}
+
+.contact-area.active .main-section .contact-content .page-bar .page-heading .animated-bar {
+    width: 28%;
+    height: 1rem;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .page-heading .animated-bar .animated-line {
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    animation: animatedline 5s ease infinite;
+}
+
+@keyframes animatedline {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        background-color: var(--white);
+    }
+
+    50% {
+        transform: translateX(19.8rem);
+        background-color: var(--active-color);
+    }
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section {
+    padding: 5rem 0;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form {
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form .contact-form-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form .contact-form-title span {
+    color: var(--active-color);
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form .contact-form-title span::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(270deg, var(--active-color), var(--active-color), var(--white), var(--white));
+    border-radius: 10px;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form input,
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form textarea {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    margin: 1rem 0;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    resize: none;
+    border-bottom: 2px solid var(--white);
+    box-shadow: none;
+    transition: 0.5s ease;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form input:focus,
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form input:valid,
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form textarea:focus,
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form textarea:valid {
+    border-bottom: 2px solid var(--active-color) !important;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form button {
+    margin: 1.5rem 0;
+    padding: 0.7rem 2rem;
+    border: 0.3px solid var(--white);
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 1s ease;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-form button:hover {
+    background-color: var(--active-color);
+    color: #fff;
+    border-color: var(--black);
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information {
+    padding: 2rem 0;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information .contact-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information .contact-title span {
+    color: var(--active-color);
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information .contact-title span::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(270deg, var(--active-color), var(--active-color), var(--white), var(--white));
+    border-radius: 10px;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information .contact-description {
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li {
+    margin: 1rem 0;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon {
+    display: flex;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-icon {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-icon .icon {
+    font-size: 35px;
+    color: var(--active-color);
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-details {
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-details .information-type {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-details .information-value {
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.contact-area.active .main-section .contact-content .page-bar .contact-section .contact-information ul li .user-icon .information-details .information-value a {
+    text-decoration: none;
+    color: var(--white);
+}

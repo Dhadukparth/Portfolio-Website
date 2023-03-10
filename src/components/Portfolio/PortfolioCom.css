@@ -1,0 +1,225 @@
+.portfolio-area.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: var(--black);
+    z-index: var(--z-md);
+}
+
+.portfolio-area.active .main-section {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.portfolio-area.active .main-section .portfolio-content {
+    margin-top: 5rem;
+}
+
+.portfolio-area.active .main-section .portfolio-content .page-bar .page-heading .page-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-area.active .main-section .portfolio-content .page-bar .page-heading .page-title-box .section-title {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    position: relative;
+}
+
+.portfolio-area.active .main-section .portfolio-content .page-bar .page-heading .page-title-box .section-title span {
+    color: var(--active-color);
+}
+
+.portfolio-area.active .main-section .portfolio-content .page-bar .page-heading .page-title-box .section-title .animated-bar {
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.portfolio-area.active .main-section .portfolio-content .page-bar .page-heading .page-title-box .section-title .animated-bar .animated-line {
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    animation: portfolioanimatedline 5s ease infinite;
+}
+
+@keyframes portfolioanimatedline {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        background-color: var(--white);
+    }
+
+    50% {
+        transform: translateX(11.5rem);
+        background-color: var(--active-color);
+    }
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section {
+    padding: 2rem 0;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .filter-control {
+    text-align: center;
+    padding-bottom: 2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .filter-control li {
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .filter-control li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--active-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .filter-control li.tab-active::after {
+    width: 100%;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid {
+    row-gap: 24px;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper {
+    position: relative;
+    width: 415px;
+    height: 445px;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper figure img {
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper .item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper .item-content .content-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper .item-content .content-more {
+    color: var(--active-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.portfolio-area.active .main-section .portfolio-content .portfolio-section .portfolio-grid .single-item .portfolio-wrapper:hover .item-content {
+    opacity: 1;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s ease-in;
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--z-xl);
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image .fullscreen-close {
+    position: relative;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image .fullscreen-close .close-btn {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image .image-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image .image-content .set-image {
+    width: 650px;
+    height: 650px;
+}
+
+.portfolio-area.active .main-section .portfolio-content .fullscreen-image .image-content .set-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

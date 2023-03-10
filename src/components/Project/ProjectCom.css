@@ -1,0 +1,167 @@
+.project-area.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: var(--black);
+    z-index: var(--z-md);
+}
+
+.project-area.active .main-section {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.project-area.active .main-section .lightbox-close {
+    position: relative;
+}
+
+.project-area.active .main-section .lightbox-close .close-btn {
+    position: fixed;
+    right: 4rem;
+    top: 2rem;
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.project-area.active .main-section .project-content {
+    margin-top: 5rem;
+}
+
+.project-area.active .main-section .project-content .page-bar .page-heading .page-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-area.active .main-section .project-content .page-bar .page-heading .page-title-box .section-title {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    position: relative;
+}
+
+.project-area.active .main-section .project-content .page-bar .page-heading .page-title-box .section-title span {
+    color: var(--active-color);
+}
+
+.project-area.active .main-section .project-content .page-bar .page-heading .page-title-box .section-title .animated-bar {
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.project-area.active .main-section .project-content .page-bar .page-heading .page-title-box .section-title .animated-bar .animated-line {
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    animation: projectanimatedline 5s ease infinite;
+}
+
+@keyframes projectanimatedline {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        background-color: var(--white);
+    }
+
+    50% {
+        transform: translateX(10rem);
+        background-color: var(--active-color);
+    }
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section {
+    padding: 5rem 0;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container {
+    row-gap: 24px;
+    position: relative;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: 0 0 3px var(--white);
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .project-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .project-image:hover img {
+    transform: scale(1.5);
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .project-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: 1s ease;
+    transform: scale(1);
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .project-image .content-year {
+    background-color: var(--active-color);
+    padding: 0.3rem 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .single-project-content {
+    padding: 2rem 1rem;
+    color: var(--white);
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .single-project-content a {
+    text-decoration: none;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .single-project-content a .project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.project-area.active .main-section .project-content .page-bar .project-section .project-container .single-project .single-project-content .project-description {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: justify;
+}

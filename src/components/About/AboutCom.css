@@ -1,0 +1,279 @@
+.rows-gap-2{
+    row-gap: 2rem;
+}
+
+.about-area.active {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    background-color: var(--black);
+    z-index: var(--z-md);
+}
+
+.about-area.active .main-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+}
+
+
+.about-area.active .main-section .about-content {
+    margin-top: 5rem;
+}
+
+.about-area.active .main-section .about-content .page-bar .page-heading .page-title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-area.active .main-section .about-content .page-bar .page-heading .page-title-box .section-title {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    position: relative;
+}
+
+.about-area.active .main-section .about-content .page-bar .page-heading .page-title-box .section-title span {
+    color: var(--active-color);
+}
+
+.about-area.active .main-section .about-content .page-bar .page-heading .page-title-box .section-title .animated-bar {
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.about-area.active .main-section .about-content .page-bar .page-heading .page-title-box .section-title .animated-bar .animated-line {
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    animation: aboutanimatedline 5s ease infinite;
+}
+
+@keyframes aboutanimatedline {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        background-color: var(--white);
+    }
+
+    50% {
+        transform: translateX(13.5rem);
+        background-color: var(--active-color);
+    }
+}
+
+.about-area.active .main-section .about-content .about-info-section {
+    padding: 5rem 0;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-image img {
+    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.15), -0.5rem 0 0.5rem rgba(255, 255, 255, 0.15), 0.5rem 0 0.5rem rgba(255, 255, 255, 0.15), 0 -0.5rem 0.5rem rgba(255, 255, 255, 0.15);
+    padding: 0.25rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: 0;
+    border-radius: 0.375rem;
+    max-width: 75%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    object-fit: cover;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-subtitle {
+    color: var(--active-color);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-title {
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 700;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-title span {
+    color: var(--active-color);
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-description {
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: justify;
+    padding: 1rem 0;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-info {
+    border-top: 1px solid var(--white);
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-info .single-info {
+    display: flex;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-info .single-info p,
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-info .single-info a {
+    color: var(--active-color);
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-info .single-info a {
+    padding: 0;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section .cv-btn {
+    padding: 0.7rem 2rem;
+    border: 0.3px solid var(--white);
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--white);
+    transition: 1s ease;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section .cv-btn:hover {
+    background-color: var(--active-color);
+    color: #fff;
+    border-color: var(--black);
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section .content-follow {
+    margin: 0;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section .content-follow li a {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 0 0.5rem;
+}
+
+.about-area.active .main-section .about-content .about-info-section .about-information .content-block .content-follow-section .content-follow li a:hover {
+    color: var(--active-color);
+    transition: all .5s ease;
+}
+
+.about-area.active .main-section .about-content .services-section {
+    padding-bottom: 5rem;
+}
+
+.about-area.active .main-section .about-content .services-section .services-main-heading {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.about-area.active .main-section .about-content .services-section .services-main-heading .services-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.about-area.active .main-section .about-content .services-section .services-main-heading .services-main-title span {
+    color: var(--active-color);
+}
+
+.about-area.active .main-section .about-content .services-section .services-main-heading .services-main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 130px;
+    height: 5px;
+    background: linear-gradient(270deg, var(--active-color), var(--active-color), var(--white));
+    border-radius: 10px;
+}
+
+.about-area.active .main-section .about-content .services-section .service-box {
+    background-color: var(--black);
+    box-shadow: 0 0 3px var(--white);
+    margin-bottom: 30px;
+    padding: 38px 30px;
+    transition: all 0.15s ease-in-out;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.about-area.active .main-section .about-content .services-section .service-box:hover {
+    border-bottom: 2px solid var(--active-color);
+}
+
+.about-area.active .main-section .about-content .services-section .service-box:hover .icon {
+    color: var(--active-color);
+}
+
+.about-area.active .main-section .about-content .services-section .service-box .icon {
+    font-size: 58px;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.about-area.active .main-section .about-content .services-section .service-box .service-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.about-area.active .main-section .about-content .services-section .service-box .service-description {
+    color: var(--white);
+    text-align: justify;
+}

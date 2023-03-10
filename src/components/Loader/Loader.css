@@ -1,0 +1,61 @@
+.loader {
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1.5s ease;
+    z-index: var(--z-xl);
+}
+
+.loader.active {
+    transform: translateY(-100%);
+}
+
+.loader .loader-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader .loader-block .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+}
+
+.loader .loader-block .icons .loader-icon {
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: 1.5s ease;
+}
+
+.loader .loader-block .icons .loader-icon.icon-1 {
+    animation: grow 1.5s ease infinite;
+}
+
+.loader .loader-block .icons .loader-icon.icon-2 {
+    animation: grow 1.5s ease infinite 0.155s;
+}
+
+.loader .loader-block .icons .loader-icon.icon-3 {
+    animation: grow 1.5s ease infinite 0.3s;
+}
+
+@keyframes grow {
+
+    0%,
+    100%,
+    40% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
